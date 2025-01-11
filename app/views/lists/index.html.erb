@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>My watchlist</h1>
+  <div class="row">
+    <% @lists.each do |list| %>
+    <div class="col-md-4 d-flex align-items-stretch">
+      <div class="card mb-4 w-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <%= link_to 'New List', new_list_path, class: 'btn btn-primary ms-2' %>
+</div>
