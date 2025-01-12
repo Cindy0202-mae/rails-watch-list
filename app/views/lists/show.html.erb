@@ -3,13 +3,16 @@
     <div class="col-md-12">
       <div class="card-body">
         <h1 class="card-title"><%= @list.name %></h1>
+        <% if flash[:alert] %>
+          <div class="alert alert-danger"><%= flash[:alert] %></div>
+        <% end %>
       </div>
     </div>
     <div class="col-md-12">
       <div class="card-body">
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <div class="form-group">
-            <%= f.association :movie, collection: Movie.all, label_method: :title, value_method: :id, prompt: "Choose a movie", label: 'Movie', input_html: { class: 'form-control' } %>
+            <%= f.input :movie_id, collection: @movies.map { |movie| [movie['title'], movie['id']] }, prompt: "Choose a movie", label: 'Movie', input_html: { class: 'form-control' } %>
           </div>
           <div class="form-group">
             <%= f.input :comment, label: 'Comment', input_html: { class: 'form-control' } %>

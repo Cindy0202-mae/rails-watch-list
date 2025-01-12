@@ -1,11 +1,16 @@
 class ListsController < ApplicationController
+  include HTTParty
+  base_uri 'https://tmdb.lewagon.com'
+
   before_action :set_list, only: [:show]
+
   def index
     @lists = List.all
   end
 
   def show
     @bookmark = Bookmark.new
+    @movies = fetch_movies
   end
 
   def new
@@ -29,5 +34,10 @@ class ListsController < ApplicationController
 
   def set_list
     @list = List.find(params[:id])
+  end
+
+  def fetch_movies
+    response = self.class.get('/movie/top_rated')
+    @movies = response.parsed_response['results']
   end
 end

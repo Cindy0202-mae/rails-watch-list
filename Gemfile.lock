@@ -93,6 +93,7 @@ GEM
     concurrent-ruby (1.3.4)
     connection_pool (2.5.0)
     crass (1.0.6)
+    csv (3.3.2)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -113,6 +114,10 @@ GEM
       sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -139,6 +144,8 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.4)
     msgpack (1.7.5)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     mutex_m (0.3.0)
     net-imap (0.5.5)
       date
@@ -279,14 +286,12 @@ GEM
     zeitwerk (2.7.1)
 
 PLATFORMS
-  aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
   arm-linux-gnu
   arm-linux-musl
   arm64-darwin
   x86_64-darwin
-  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -296,6 +301,7 @@ DEPENDENCIES
   bootstrap (~> 5.2)
   debug
   font-awesome-sass (~> 6.1)
+  httparty
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -315,4 +321,4 @@ RUBY VERSION
    ruby 3.3.5p100
 
 BUNDLED WITH
-   2.6.1
+   2.6.2
