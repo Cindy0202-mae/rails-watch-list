@@ -12,3 +12,10 @@
 @import "pages/index";
 @import "components/navbar";
 @import "components/banner";
+@import "components/lists";
+@import "components/footer";
+
+body {
+  background-color: #27323d; /* Light grey background */
+  color: #ffffff;
+}

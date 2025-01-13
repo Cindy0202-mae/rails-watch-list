@@ -2,6 +2,13 @@
   <div class="banner-content">
     <h1>Open your WatchVault</h1>
     <p><em>Your ultimate movie watchlist</em></p>
-    <%= link_to 'Get Started', lists_path, class: 'btn btn-primary' %>
+    <%= simple_form_for :search, url: root_path, method: :get, html: { class: 'form-inline' } do |f| %>
+      <div class="input-group mb-3">
+        <%= f.input :query, input_html: { class: 'form-control', placeholder: 'Search for a list...' }, label: false %>
+        <div class="input-group-append">
+          <%= f.button :submit, 'Search', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

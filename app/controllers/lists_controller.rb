@@ -5,7 +5,11 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show]
 
   def index
-    @lists = List.all
+    if params[:search] && params[:search][:query].present?
+      @lists = List.where('name ILIKE ?', "%#{params[:search][:query]}%")
+    else
+      @lists = List.all
+    end
   end
 
   def show
