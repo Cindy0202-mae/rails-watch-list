@@ -1,34 +1,15 @@
 <%= render 'banner' %>
-<div class="container mt-5">
-  <h1 class="text-white">My Watchlist</h1>
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <% @lists.each_slice(3).with_index do |lists_slice, index| %>
-        <div class="carousel-item <%= 'active' if index == 0 %>">
-          <div class="row">
-            <% lists_slice.each do |list| %>
-              <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card mb-4 w-100">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+<div class="container mt-4">
+  <h2>Watch Lists</h2>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4 mb-4">
+        <div class="tile">
+          <div class="tile-info">
+            <h5><%= link_to list.name, list_path(list) %></h5>
           </div>
         </div>
-      <% end %>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="d-flex justify-content-center mt-4">
-    <%= link_to 'New List', new_list_path, class: 'btn btn-primary' %>
+      </div>
+    <% end %>
   </div>
 </div>
