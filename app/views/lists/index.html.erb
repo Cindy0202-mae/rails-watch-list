@@ -1,15 +1,15 @@
 <%= render 'banner' %>
 <div class="container mt-4">
   <h2>Watch Lists</h2>
-  <div class="row">
-    <% @lists.each do |list| %>
-      <div class="col-md-4 mb-4">
-        <div class="tile">
-          <div class="tile-info">
-            <h5><%= link_to list.name, list_path(list) %></h5>
-          </div>
+  <div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'default_image_url' %>)">
+      <%= link_to list_path(list), class: 'card-link' do %>
+        <div class="card-content">
+          <span class="card-title"><%= list.name %></span>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 </div>
