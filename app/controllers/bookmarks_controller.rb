@@ -1,9 +1,6 @@
 class BookmarksController < ApplicationController
-  before_action :set_list, only: [:create]
-
-  # def new
-  #   @bookmark = Bookmark.new
-  # end
+  before_action :set_list, only: [:create, :destroy]
+  before_action :fetch_movies, only: [:create]
 
   def create
     @bookmark = @list.bookmarks.new(bookmark_params)
@@ -27,6 +24,11 @@ class BookmarksController < ApplicationController
 
   def set_list
     @list = List.find(params[:list_id])
+  end
+
+  def fetch_movies
+    response = HTTParty.get('https://tmdb.lewagon.com/movie/top_rated')
+    @movies = response.parsed_response['results']
   end
 
   def bookmark_params

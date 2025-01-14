@@ -1,0 +1,33 @@
+.show-page-content {
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.card-header h2, .card-header h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-body {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+}
+
+.list-group-item .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.list-group-item .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
