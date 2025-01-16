@@ -9,7 +9,7 @@
           <span class="card-title"><%= list.name %></span>
         </div>
       <% end %>
-      <%= link_to list_path(list), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'delete-icon' do %>
+      <%= link_to list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'delete-icon' do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
     </div>
