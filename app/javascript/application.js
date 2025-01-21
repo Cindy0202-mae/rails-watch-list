@@ -4,3 +4,5 @@ import "controllers"
 
 import "bootstrap"
 import "@popperjs/core"
+
+// console.log("Bootstrap and Popper.js loaded")
