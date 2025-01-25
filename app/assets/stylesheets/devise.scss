@@ -1,0 +1,36 @@
+/* filepath: /Users/cindymaengoho/code/Cindy0202-mae/rails-watch-list/app/assets/stylesheets/devise.scss */
+.container {
+  margin-top: 200px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #c6dddd;
+  color: white;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
