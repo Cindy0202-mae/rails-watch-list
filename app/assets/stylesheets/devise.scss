@@ -9,7 +9,7 @@
 }
 
 .card-header {
-  background-color: #c6dddd;
+  background-color: #007bff;
   color: white;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
@@ -33,4 +33,14 @@
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
 }
