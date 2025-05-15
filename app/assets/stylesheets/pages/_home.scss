@@ -1,38 +1,55 @@
-// Specific CSS for your home-page
-.hero-section {
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.overarching-container {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-bg {
+  background: linear-gradient(to bottom, rgba(163, 152, 152, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  height: 100vh;
+}
+
+.logo-img {
+  height: 300px;
+  width: auto;
+}
+
+.custom-h1 {
+  font-size: 2.5rem;
   color: white;
-  text-align: center;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0056b3, #0096d1);
+}
+
+.image-stack {
   position: relative;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better readability */
+.image-wrapper {
+  margin: 10px;
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  z-index: 1;
-  position: relative;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  z-index: 1;
-  position: relative;
-}
-
-.btn-primary {
-  z-index: 1;
-  position: relative;
+.extra-img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
