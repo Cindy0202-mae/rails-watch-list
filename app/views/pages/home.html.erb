@@ -1,55 +1,54 @@
-<!-- filepath: /Users/cindymaengoho/code/Cindy0202-mae/rails-watch-list/app/views/pages/home.html.erb -->
-<div class="hero-section" style="background-image: url('https://example.com/your-background-image.jpg');">
-  <div class="container text-center">
-    <h1 class="hero-title">Welcome to Rails Watch List</h1>
-    <p class="hero-subtitle">Discover and manage your favorite movies</p>
-    <%= link_to 'Get Started', lists_path, class: 'btn btn-primary btn-lg' %>
-  </div>
-</div>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "watchvault-logo.png", alt: "WatchVault Logo", class: "navbar-logo" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="container mt-5">
-  <h2>Features</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <h3>Feature 1</h3>
-      <p>Describe the feature here.</p>
-    </div>
-    <div class="col-md-4">
-      <h3>Feature 2</h3>
-      <p>Describe the feature here.</p>
-    </div>
-    <div class="col-md-4">
-      <h3>Feature 3</h3>
-      <p>Describe the feature here.</p>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-6 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="container mt-5">
-  <h2>Testimonials</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <blockquote>
-        <p>"This is the best movie management app I've ever used!"</p>
-        <footer>- Happy User</footer>
-      </blockquote>
-    </div>
-    <div class="col-md-4">
-      <blockquote>
-        <p>"I love how easy it is to keep track of my favorite movies."</p>
-        <footer>- Movie Enthusiast</footer>
-      </blockquote>
-    </div>
-    <div class="col-md-4">
-      <blockquote>
-        <p>"A must-have app for any movie lover."</p>
-        <footer>- Film Critic</footer>
-      </blockquote>
+<div class="overarching-container d-flex flex-column flex-grow-1">
+  <div class="position-relative h-100 w-100 overflow-hidden d-flex align-items-center justify-content-start custom-bg">
+    <div class="container position-relative z-2 text-white px-4 px-md-5">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <div class="mb-3">
+            <%= image_tag "watchvault-logo.png", alt: "WatchVault Logo", class: "logo-img img-fluid" %>
+          </div>
+          <h1 class="fw-bold custom-h1">
+            Discover and Manage Your Favorite Movies
+          </h1>
+          <p class="lead">
+            <span id="typed-text">Plan your movie nights effortlessly.</span><span class="typed-cursor" aria-hidden="true">🪄</span>
+          </p>
+          <div>
+            <%= link_to "Login to Get Started", new_user_session_path, class: "btn btn-gradient btn-lg mt-3 px-4 py-2" %>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <div class="image-stack">
+            <div class="image-wrapper">
+              <%= image_tag "movie1.jpg", alt: "Movie Poster 1", class: "extra-img img-fluid" %>
+            </div>
+            <div class="image-wrapper">
+              <%= image_tag "movie2.jpg", alt: "Movie Poster 2", class: "extra-img img-fluid" %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="container mt-5 text-center">
-  <h2>Ready to get started?</h2>
-  <%= link_to 'Sign Up Now', new_user_registration_path, class: 'btn btn-success btn-lg' %>
 </div>
